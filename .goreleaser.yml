@@ -22,7 +22,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - s390x
     main: ./cmd/cfssl
     ldflags:
       - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
@@ -59,7 +58,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - s390x
     main: ./cmd/cfssl-bundle
     ldflags:
       - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
@@ -96,7 +94,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - s390x
     main: ./cmd/cfssl-certinfo
     ldflags:
       - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
@@ -133,7 +130,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - s390x
     main: ./cmd/cfssl-newkey
     ldflags:
       - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
@@ -170,7 +166,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - s390x
     main: ./cmd/cfssl-scan
     ldflags:
       - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
@@ -207,7 +202,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - s390x
     main: ./cmd/cfssljson
     ldflags:
       - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
@@ -244,7 +238,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - s390x
     main: ./cmd/mkbundle
     ldflags:
       - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
@@ -281,7 +274,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - s390x
     main: ./cmd/multirootca
     ldflags:
       - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
