@@ -22,25 +22,17 @@ builds:
       - linux
     goarch:
       - amd64
-    main: ./cmd/cfssl
-    ldflags:
-      - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
-      - -linkmode external -extldflags "-static"
-    env:
-      - CC=/usr/bin/musl-gcc
-  - id: cfssl-linux-s390x
-    binary: cfssl
-    goos:
-      - linux
-    goarch:
+        env:
+          - CC=/usr/bin/musl-gcc   
       - s390x
+        env:
+          - CC=/usr/bin/s390x-linux-gnu-gcc
+          - CXX=/usr/bin/s390x-linux-gnu-g++
     main: ./cmd/cfssl
     ldflags:
       - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
       - -linkmode external -extldflags "-static"
-    env:
-      - CC=/usr/bin/s390x-linux-gnu-gcc
-      - CXX=/usr/bin/s390x-linux-gnu-g++
+
 archives:
   - format: binary
 release:
